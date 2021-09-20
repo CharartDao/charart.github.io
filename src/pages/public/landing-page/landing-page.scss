@@ -1,0 +1,216 @@
+@import '../../../styles/colors';
+
+.page-landing {
+  font-style: normal;
+  min-height: 100vh;
+  position: relative;
+  padding-bottom: 40px;
+  background-color: $primary-color;
+
+  header {
+    text-align: center;
+
+    & > .logo {
+      height: 64px;
+      margin: 55px;
+    }
+  }
+
+  article {
+    width: 448px;
+    height: 448px;
+    background-color: $white-default;
+    border-radius: 248px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    padding: 24px;
+
+    & > .logo-small-screen {
+      display: none;
+    }
+
+    & > .title {
+      font-size: 24px;
+      font-weight: 500;
+      line-height: 28px;
+      color: $black-default;
+      margin: 36px 0 10px;
+    }
+
+    & > .subtitle {
+      font-size: 14px;
+      line-height: 20px;
+      letter-spacing: 0.25px;
+      color: $black-default;
+    }
+
+    & > .email-text {
+      color: $black-default;
+    }
+
+    & > .grid-menu {
+      margin-top: 68px;
+      margin-bottom: 50px;
+      cursor: pointer;
+
+      & > .menu-item {
+        margin-bottom: 28px;
+        cursor: pointer;
+
+        & > .item-title {
+          font-size: 14px;
+          line-height: 16px;
+          text-align: center;
+          color: $black-default;
+          cursor: pointer;
+        }
+
+        & > .icon {
+          & svg,
+          path,
+          * {
+            fill: $black-default;
+            cursor: pointer;
+            width: 100px;
+          }
+        }
+      }
+    }
+  }
+
+  main {
+    max-width: 408px;
+    margin: auto;
+    margin-top: -40px;
+    text-align: center;
+    background-color: $white-default;
+    border-radius: 204px;
+
+    & > .title-buttons {
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 28px;
+    }
+
+    & > button {
+      margin: 3px !important;
+      width: 176px; /* override button width */
+    }
+  }
+
+  footer {
+    height: 50px;
+
+    & > ul {
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      height: 40px;
+      text-align: center;
+      list-style-type: none;
+      padding: 0;
+
+      li {
+        display: inline-flex;
+
+        & > a {
+          padding: 18px;
+          font-size: 13px;
+          line-height: 15px;
+          letter-spacing: 0.25px;
+          opacity: 0.9;
+          cursor: pointer;
+          color: $white-default;
+        }
+      }
+    }
+  }
+
+  @media (min-height: 1200px) {
+    article {
+      margin-top: 130px;
+    }
+  }
+
+  @media (max-width: 599px) {
+    & {
+      background-color: $white-default;
+    }
+
+    header {
+      & > .logo {
+        display: none;
+      }
+    }
+
+    article {
+      width: 100%;
+      margin-top: 0;
+      background-color: $primary-color;
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+
+      & > .logo-small-screen {
+        height: 64px;
+        display: initial;
+        margin-top: 30px;
+      }
+
+      & > .title {
+        color: $white-default;
+      }
+
+      & > .subtitle {
+        color: $white-default;
+      }
+
+      & > .email-text {
+        color: $white-default;
+      }
+
+      & > .grid-menu {
+        margin-bottom: 110px;
+        max-width: 343px;
+        margin-right: auto;
+        margin-left: auto;
+
+        & > .menu-item {
+          margin-bottom: 28px;
+
+          & > .item-title {
+            color: $white-default;
+          }
+
+          & > .icon {
+            & svg,
+            path,
+            * {
+              fill: $white-default;
+            }
+          }
+        }
+      }
+    }
+
+    main {
+      max-width: 343px;
+      margin-top: -115px;
+      background-color: $white-default;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+      padding-top: 20px;
+
+      & > button {
+        width: 147px; /* override button width */
+      }
+    }
+
+    footer > ul {
+      li {
+        & > a {
+          color: $black-default;
+        }
+      }
+    }
+  }
+}

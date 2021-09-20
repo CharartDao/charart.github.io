@@ -1,0 +1,34 @@
+$text-color: #111;
+$text-white: #F0F0F0;
+$primary-color: #888888;
+$secondary-color: #2196f3;
+$white-default: #F0F0F0;
+$black-default: #1b1b1b;
+$critical-color: #b90244;
+
+/* INPUTS colors */
+$border-default: #c6c6c6;
+
+//image placeholders
+$image-background: #555;
+
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+:root {
+  --priority-high: #d63031;
+  --priority-medium: #636e72;
+  --priority-low: #fdcb6e;
+  --text-color: #{$text-color};
+  --text-white: #{$text-white};
+  --primary-color: #{$primary-color};
+  --secondary-color: #{$secondary-color};
+  --white-default: #{$white-default};
+  --black-default: #{$black-default};
+  --border-default: #{$border-default};
+  --image-background: #{$image-background};
+  --grey: #4a4f5e;
+  --critical-color: #{$critical-color};
+}
