@@ -25,16 +25,33 @@
         justify-content: center;
     }
 
-    .features {
-        display: flex;
-        align-items: center;
-        padding: 2rem 0;
-        width: 100%;
+    .exampleCarousel1 button:first-child {
+    	background: url('https://cdn.dsmcdn.com/web/production/slick-arrow.svg') no-repeat
+    	center;
+    	transform: rotateZ(180deg);
+    	outline: none;
+    	border: none;
+    	cursor: relative;
+    	position: center;
+    	left: -16px;
+        width: 20px;
+        height: 200px;
     }
 
-    .featureImage {
+    .exampleCarousel1 button:last-child {
+    	background: url('https://cdn.dsmcdn.com/web/production/slick-arrow.svg') no-repeat
+    		center;
+    	outline: none;
+    	border: none;
+    	cursor: pointer;
+    	position: relative;
+    	right: -16px;
+        width: 20px;
         height: 200px;
-        width: 200px;
+    }
+
+    .exampleCarousel1 div:first-child {
+    	text-align: center;
     }
 }
 
