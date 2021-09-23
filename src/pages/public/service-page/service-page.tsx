@@ -13,7 +13,6 @@ import { Carousel, ScrollingCarousel } from '@trendyol-js/react-carousel';
 
 
 const ServicePage = () => {
-	//return <Redirect to="/react-carousel/docs/installation" />;
 	const [features, setFeatures] = useState([
 	  {
 	  	id: 1,
@@ -79,77 +78,21 @@ const ServicePage = () => {
   return (
     <div className="service">
     				{features && features.length && (
-    					<section className={'features'}>
-    						<div className="container">
-    							<div className="row">
     								<Carousel className={'exampleCarousel1'}
     									swiping={true}
     									dynamic={true}
-    									show={2}
-    									slide={2}
+    									show={1}
+    									slide={1}
     									transition={0.5}
     								>
     									{features.map((props, idx) => (
     										<Asset key={props.id} {...props} />
     									))}
     								</Carousel>
-    							</div>
-    						</div>
-    					</section>
     				)}
-
-    <ImageList >
-      {itemData.map((item) => (
-        <ImageListItem key={item.img}>
-          <img
-            src={`${item.img}?w=248&fit=crop&auto=format`}
-            srcSet={`${item.img}?w=248&fit=crop&auto=format&dpr=2 2x`}
-            alt={item.title}
-            loading="lazy"
-            className={'exampleCarousel1'}
-          />
-          <ImageListItemBar
-            title={item.title}
-            subtitle={<span>by: {item.author}</span>}
-            position="below"
-          />
-        </ImageListItem>
-      ))}
-    </ImageList>
     </div>
   );
 };
 
 export default layout(ServicePage)({ pageName: 'Service' });
-/*
-const itemData = [
-  {
-    img: 'Waterbird',
-    title: 'Water Birds',
-    author: '@AncientMoon',
-  },
-];
-*/
 
-const itemData = [
-  {
-    img: Waterbird,
-    title: 'Water Birds',
-    author: '@AncientMoon',
-  },
-  {
-    img: Cat,
-    title: 'Cat',
-    author: '@AncientMoon',
-  },
-  {
-    img: LesserWhiteToothedShrew,
-    title: 'lesser white-toothed shrew',
-    author: '@AncientMoon',
-  },
-  {
-    img: BlackWhiteTiger,
-    title: 'Black White Tiger',
-    author: '@AncientMoon',
-  },
-];

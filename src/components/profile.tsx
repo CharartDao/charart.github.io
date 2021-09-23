@@ -16,18 +16,6 @@ const Header: React.FC = () => {
     history.push(PROFILE);
   };
 
-   const profile =
-   {
-      firstName: 'Max',
-      lastName: 'Müller',
-   };
-
-  if (!profile) {
-    return null;
-  }
-
-
-
   return (
     <Box display="flex">
       <Box mr={'1rem'}>
@@ -39,11 +27,6 @@ const Header: React.FC = () => {
           )}
         </IconButton>
       </Box>
-        <Box mr="2rem">
-          <div >
-            {profile.firstName} {profile.lastName}
-          </div>
-        </Box>
     </Box>
   );
 };

@@ -2,6 +2,7 @@ import MenuBar from './menu-bar';
 import { Box, IconButton } from '@mui/material';
 import React, { useEffect } from 'react';
 import { isMobileSafari } from 'react-device-detect';
+import './layout';
 
 export type PageProps = {
   pageName?: string;
@@ -21,7 +22,7 @@ const layout =
       }, [isMobileSafari]);
 
       return (
-        <div className="with-tenant-layout">
+        <div className="layout">
           <div className="container">
             <MenuBar />
             <Box p="1rem">

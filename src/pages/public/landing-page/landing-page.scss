@@ -6,6 +6,7 @@
   position: relative;
   padding-bottom: 40px;
   background-color: $primary-color;
+  margin: -8px;
 
   header {
     text-align: center;
@@ -25,6 +26,7 @@
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
     text-align: center;
     padding: 24px;
+    box-shadow:0 0 50px silver,0 0 150px silver;
 
     & > .logo-small-screen {
       display: none;
@@ -76,26 +78,6 @@
           }
         }
       }
-    }
-  }
-
-  main {
-    max-width: 408px;
-    margin: auto;
-    margin-top: -40px;
-    text-align: center;
-    background-color: $white-default;
-    border-radius: 204px;
-
-    & > .title-buttons {
-      font-weight: 500;
-      font-size: 24px;
-      line-height: 28px;
-    }
-
-    & > button {
-      margin: 3px !important;
-      width: 176px; /* override button width */
     }
   }
 
@@ -192,17 +174,45 @@
         }
       }
     }
+    article:hover {
+    background-color:$white-default;
+    transition:1s;
 
-    main {
-      max-width: 343px;
-      margin-top: -115px;
-      background-color: $white-default;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
-      padding-top: 20px;
+    & > .title {
+    color: $black-default;
+    }
 
-      & > button {
-        width: 147px; /* override button width */
+    & > .subtitle {
+    color: $black-default;
+    }
+
+    & > .email-text {
+    color: $black-default;
+    }
+
+    & > .grid-menu {
+    margin-bottom: 110px;
+    max-width: 343px;
+    margin-right: auto;
+    margin-left: auto;
+
+    & > .menu-item {
+      margin-bottom: 28px;
+
+      & > .item-title {
+        color: $black-default;
       }
+
+      & > .icon {
+        & svg,
+        path,
+        * {
+          fill: $black-default;
+        }
+      }
+    }
+    }
+
     }
 
     footer > ul {
@@ -214,3 +224,5 @@
     }
   }
 }
+
+.page-landing:hover {background-color:#123;transition:1s;}

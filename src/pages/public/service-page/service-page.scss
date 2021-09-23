@@ -1,7 +1,4 @@
 .service {
-  margin-top: 30px;
-  margin-left: 30px;
-  margin-right: 30px;
 
   .map {
     width: 100%;
@@ -26,27 +23,22 @@
     }
 
     .exampleCarousel1 button:first-child {
-    	background: url('https://cdn.dsmcdn.com/web/production/slick-arrow.svg') no-repeat
-    	center;
-    	transform: rotateZ(180deg);
+    	background: url('https://cdn.dsmcdn.com/web/production/slick-arrow.svg') no-repeat center;
+    	transform: rotateX(180deg);
     	outline: none;
     	border: none;
     	cursor: relative;
     	position: center;
-    	left: -16px;
-        width: 20px;
         height: 200px;
     }
 
     .exampleCarousel1 button:last-child {
-    	background: url('https://cdn.dsmcdn.com/web/production/slick-arrow.svg') no-repeat
-    		center;
+    	background: url('https://cdn.dsmcdn.com/web/production/slick-arrow.svg') no-repeat center;
+    	transform: rotateX(0deg);
     	outline: none;
     	border: none;
     	cursor: pointer;
     	position: relative;
-    	right: -16px;
-        width: 20px;
         height: 200px;
     }
 

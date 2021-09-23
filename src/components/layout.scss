@@ -1,0 +1,16 @@
+@import '../../../styles/colors';
+
+.layout {
+  align-items: center;
+  display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
+  flex-shrink: 1;
+  flex-direction: column;
+  padding: 0;
+  max-width: 100%;
+  min-height: 100%;
+  position: relative;
+  background-color: $primary-color;
+  margin: -8px;
+}
