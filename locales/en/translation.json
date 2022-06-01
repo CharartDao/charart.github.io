@@ -1,0 +1,57 @@
+{
+  "global": {
+    "error": "Something went wrong!!",
+    "imprint": "Imprint",
+    "privacy": "Privacy",
+    "termsOfUse": "Terms of Use"
+  },
+  "homepage": {
+    "title": "This is Chenpo´s Art Home Page!"
+  },
+  "header": {
+    "title": "Foolish Art",
+    "services": "Services",
+    "about": "About"
+  },
+  "drawerNav": {
+    "news": "News",
+    "identifyProduct": "Identify Art Item",
+    "productionAdministration": "Art Item Administration",
+    "createProduct": "Create Product",
+    "languague": "Languague",
+    "en": "EN",
+    "de": "DE",
+    "zh": "ZH"
+  },
+  "bottomNav": {
+    "home": "Home",
+    "news": "News",
+    "profile": "Profile",
+    "identifyProduct": "Identify",
+    "productionOverview": "Production",
+    "faultOverview": "Faults"
+  },
+  "productOverviewPage": {
+    "headline": "Art Overview",
+    "intro": "Check the arts.",
+    "newProductsToggle": "Click here",
+    "newProductsText": "to see new products only.",
+    "kpi": {
+      "available arts": "Available Arts"
+    }
+  },
+  "landingPage": {
+    "title": "Welcome to Foolish Art",
+    "subtitle": "Stay Hungry!",
+    "newAccount": "New account",
+    "login": "login",
+    "resetPassword": "Forgot password?",
+    "foolishArtServices": "Art Catalogue",
+    "nftArts": "NFT Arts",
+    "nftBooks": "NFT Books",
+    "aboutFoolishArt": "About"
+  },
+  "artDetailPage": {
+    "noData": "There is no data available, please contact the support."
+  }
+}
