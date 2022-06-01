@@ -34,7 +34,7 @@
     "typescript": "^4.4.3",
     "web-vitals": "^1.1.2"
   },
-  "homepage": "https://Foolart.github.io/foolart.github.io/",
+  "homepage": "https://foolart.github.io/foolart.github.io/",
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build", 
