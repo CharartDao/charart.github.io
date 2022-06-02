@@ -6,7 +6,7 @@ import { useHistory } from 'react-router-dom';
 import './landing-page.scss';
 import { ABOUT, SERVICE } from '../../../routes/public';
 import FooterDefaultComponent from '../../../components/default-footer';
-import logo192 from '../../../logo.svg';
+import logo192 from '../../../../logo192.png';
 
 const LandingPage: React.FC = () => {
   const { t } = useTranslation();
