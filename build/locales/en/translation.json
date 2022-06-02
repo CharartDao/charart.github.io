@@ -46,9 +46,9 @@
     "newAccount": "New account",
     "login": "login",
     "resetPassword": "Forgot password?",
-    "foolishArtServices": "Art Catalogue",
-    "nftArts": "NFT Arts",
-    "nftBooks": "NFT Books",
+    "foolishArtServices": "NFT",
+    "nftArts": "Digital Arts",
+    "nftBooks": "Physical Arts",
     "aboutFoolishArt": "About"
   },
   "artDetailPage": {
