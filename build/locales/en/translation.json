@@ -15,9 +15,9 @@
   },
   "drawerNav": {
     "news": "News",
-    "identifyProduct": "Identify Art Item",
-    "productionAdministration": "Art Item Administration",
-    "createProduct": "Create Product",
+    "identifyArtItem": "Identify Art Item",
+    "artAdministration": "Art Item Administration",
+    "createArt": "Create Art",
     "languague": "Languague",
     "en": "EN",
     "de": "DE",
@@ -27,15 +27,15 @@
     "home": "Home",
     "news": "News",
     "profile": "Profile",
-    "identifyProduct": "Identify",
-    "productionOverview": "Production",
-    "nftOverview": "Faults"
+    "identifyArtItem": "Identify",
+    "artOverview": "Art",
+    "nftOverview": "nft"
   },
-  "productOverviewPage": {
+  "artOverviewPage": {
     "headline": "Art Overview",
     "intro": "Check the arts.",
-    "newProductsToggle": "Click here",
-    "newProductsText": "to see new products only.",
+    "newArtToggle": "Click here",
+    "newArtText": "to see new products only.",
     "kpi": {
       "available arts": "Available Arts"
     }
