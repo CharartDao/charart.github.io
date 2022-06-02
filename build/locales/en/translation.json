@@ -6,7 +6,7 @@
     "termsOfUse": "Terms of Use"
   },
   "homepage": {
-    "title": "This is Foolart Home Page!"
+    "title": "This is Chenpo´s Art Home Page!"
   },
   "header": {
     "title": "Foolart",
@@ -46,9 +46,9 @@
     "newAccount": "New account",
     "login": "login",
     "resetPassword": "Forgot password?",
-    "foolishArtServices": "NFT Market",
-    "nftArts": "Digital Art",
-    "nftBooks": "Physical Art",
+    "foolishArtServices": "Art Catalogue",
+    "nftArts": "NFT Arts",
+    "nftBooks": "NFT Books",
     "aboutFoolishArt": "About"
   },
   "artDetailPage": {
