@@ -9,7 +9,7 @@
     "title": "This is Chenpo´s Art Home Page!"
   },
   "header": {
-    "title": "Foolish Art",
+    "title": "Foolart",
     "services": "Services",
     "about": "About"
   },
@@ -41,7 +41,7 @@
     }
   },
   "landingPage": {
-    "title": "Welcome to Foolish Art",
+    "title": "Welcome to Foolart",
     "subtitle": "Stay Hungry!",
     "newAccount": "New account",
     "login": "login",
