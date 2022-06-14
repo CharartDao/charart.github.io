@@ -16,7 +16,7 @@ const Swidget= () => {
 
 Swidget.metadata = {
   authors: [],
-  description: 'foolish-art',
+  description: 'foolart',
 };
 
 export default Swidget;

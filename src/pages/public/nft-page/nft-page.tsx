@@ -1,11 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import Box from '@mui/material/Box';
 import ImageList from '@mui/material/ImageList';
 import ImageListItem, { imageListItemClasses } from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
-import {createTheme, ThemeProvider} from "@mui/material/styles";
 import layout from '../../../components/layout';
-import Asset from '../../../components/asset';
+//import Asset from '../../../components/asset';
 import './nft-page.scss';
 import Waterbird from '../../../arttemp/Waterbird.JPG';
 import Cat from '../../../arttemp/IMG_0721.JPG';
@@ -15,33 +13,33 @@ import BlackWhiteTiger from '../../../arttemp/IMG_0917.JPG';
 const NFTPage: React.FC = () => {
 
     const itemData = [
-	  {
-	  	id: 1,
+      {
+        id: 1,
         imageUrl: Waterbird,
         title: 'Water Birds',
         author: '@AncientMoon',
-		description: 'img/undraw_docusaurus_react.svg',
+        description: 'img/undraw_docusaurus_react.svg',
       },
       {
- 		id: 2,
+        id: 2,
         imageUrl: Cat,
         title: 'Cat',
         author: '@AncientMoon',
-		description: 'img/undraw_docusaurus_react.svg',
+        description: 'img/undraw_docusaurus_react.svg',
       },
       {
- 		id: 3,
+        id: 3,
         imageUrl: LesserWhiteToothedShrew,
         title: 'lesser white-toothed shrew',
         author: '@AncientMoon',
-		description: 'img/undraw_docusaurus_react.svg',
+        description: 'img/undraw_docusaurus_react.svg',
       },
       {
- 		id: 4,
+        id: 4,
         imageUrl: BlackWhiteTiger,
         title: 'Black White Tiger',
         author: '@AncientMoon',
-		description: 'img/undraw_docusaurus_react.svg',
+        description: 'img/undraw_docusaurus_react.svg',
       },
 	];
 
@@ -51,7 +49,7 @@ const NFTPage: React.FC = () => {
     md: 960,
     lg: 1280,
     xl: 1920
-    };
+  };
   
   const getColumns = (width:any) => {
     if (width < breakpoints.sm) {
@@ -78,8 +76,7 @@ const NFTPage: React.FC = () => {
   }, []);
 
   return (
-    <ImageList cols={columns}
-  >
+    <ImageList cols={columns}>
       {itemData.map((item) => (
         <ImageListItem key={item.imageUrl}>
           <img
@@ -95,7 +92,7 @@ const NFTPage: React.FC = () => {
           />
         </ImageListItem>
       ))}
-  </ImageList>  );
+  </ImageList> );
 };
 
 export default layout(NFTPage)({ pageName: 'NFT' });
