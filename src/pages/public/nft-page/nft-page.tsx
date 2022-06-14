@@ -12,39 +12,6 @@ import Cat from '../../../arttemp/IMG_0721.JPG';
 import LesserWhiteToothedShrew from '../../../arttemp/IMG_E0842.JPG';
 import BlackWhiteTiger from '../../../arttemp/IMG_0917.JPG';
 
-const breakpoints = {
-  xs: 0,
-  sm: 600,
-  md: 960,
-  lg: 1280,
-  xl: 1920
-  };
-
-const getColumns = (width:any) => {
-  if (width < breakpoints.sm) {
-      return 2
-  } else if (width < breakpoints.md) {
-      return 3
-  } else if (width < breakpoints.lg) {
-      return 6
-  } else if (width < breakpoints.xl) {
-      return 7
-  } else {
-      return 8
-  }
-}
-
-const [columns, setColumns] = React.useState(getColumns(window.innerWidth))
-const updateDimensions = () => {
-  setColumns(getColumns(window.innerWidth))
-}
-
-React.useEffect(() => {
-  window.addEventListener("resize", updateDimensions);
-  return () => window.removeEventListener("resize", updateDimensions);
-}, []);
-
-
 const NFTPage: React.FC = () => {
 
     const itemData = [
@@ -77,6 +44,38 @@ const NFTPage: React.FC = () => {
 		description: 'img/undraw_docusaurus_react.svg',
       },
 	];
+
+  const breakpoints = {
+    xs: 0,
+    sm: 600,
+    md: 960,
+    lg: 1280,
+    xl: 1920
+    };
+  
+  const getColumns = (width:any) => {
+    if (width < breakpoints.sm) {
+        return 2
+    } else if (width < breakpoints.md) {
+        return 3
+    } else if (width < breakpoints.lg) {
+        return 6
+    } else if (width < breakpoints.xl) {
+        return 7
+    } else {
+        return 8
+    }
+  }
+
+  const [columns, setColumns] = useState(getColumns(window.innerWidth))
+  const updateDimensions = () => {
+    setColumns(getColumns(window.innerWidth))
+  }
+
+  useEffect(() => {
+    window.addEventListener("resize", updateDimensions);
+    return () => window.removeEventListener("resize", updateDimensions);
+  }, []);
 
   return (
     <ImageList cols={columns}
