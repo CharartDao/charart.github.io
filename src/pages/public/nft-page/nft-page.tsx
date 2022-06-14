@@ -34,12 +34,12 @@ const getColumns = (width:any) => {
   }
 }
 
-const [columns, setColumns] = useState(getColumns(window.innerWidth))
+const [columns, setColumns] = React.useState(getColumns(window.innerWidth))
 const updateDimensions = () => {
   setColumns(getColumns(window.innerWidth))
 }
 
-useEffect(() => {
+React.useEffect(() => {
   window.addEventListener("resize", updateDimensions);
   return () => window.removeEventListener("resize", updateDimensions);
 }, []);
