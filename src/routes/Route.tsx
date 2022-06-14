@@ -10,7 +10,7 @@ import {
 import LandingPage from '../pages/public/landing-page/landing-page';
 import ArtDetailPage from '../pages/public/art-detail-page/art-detail-page';
 import AboutPage from '../pages/public/about-page/about-page';
-import ServicePage from '../pages/public/service-page/service-page';
+import ServicePage from '../pages/public/nft-page/nft-page';
 
 const Route: React.FC = () => {
   return (
