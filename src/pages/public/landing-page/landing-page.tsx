@@ -4,7 +4,7 @@ import { EmojiSymbols, TravelExplore } from '@mui/icons-material';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import './landing-page.scss';
-import { ABOUT, SERVICE } from '../../../routes/public';
+import { ABOUT, NFT } from '../../../routes/public';
 import FooterDefaultComponent from '../../../components/default-footer';
 import logo192 from '../../../logobw.svg';
 
@@ -39,7 +39,7 @@ const LandingPage: React.FC = () => {
               item
               className="menu-item"
               onClick={() => {
-                history.push(SERVICE);
+                history.push(NFT);
               }}
             >
               <EmojiSymbols className="icon" fontSize="large"/>
