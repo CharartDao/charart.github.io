@@ -1,6 +1,6 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar as AppBarMat, Box, Button, Toolbar } from '@mui/material';
-import { SERVICE } from '../routes/public';
+import { NFT } from '../routes/public';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NotificationBell from './notification-bell';
@@ -25,7 +25,7 @@ const MenuBar: React.FC = () => {
           />
         </Box>
         <Box textAlign="center">
-          <Link href="#" id="Header_Title_Link" color="inherit" to={SERVICE}>
+          <Link href="#" id="Header_Title_Link" color="inherit" to={NFT}>
             <img src={logo192} width={83} />
           </Link>
         </Box>
