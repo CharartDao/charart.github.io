@@ -9,11 +9,10 @@ import Waterbird from '../../../arttemp/Waterbird.JPG';
 import Cat from '../../../arttemp/IMG_0721.JPG';
 import LesserWhiteToothedShrew from '../../../arttemp/IMG_E0842.JPG';
 import BlackWhiteTiger from '../../../arttemp/IMG_0917.JPG';
-import { Carousel, ScrollingCarousel } from '@trendyol-js/react-carousel';
 
+const NFTPage: React.FC = () => {
 
-const ServicePage = () => {
-	const [features, setFeatures] = useState([
+    const itemData = [
 	  {
 	  	id: 1,
         imageUrl: Waterbird,
@@ -42,57 +41,28 @@ const ServicePage = () => {
         author: '@AncientMoon',
 		description: 'img/undraw_docusaurus_react.svg',
       },
-	]);
-
-	const [added, setAdded] = useState(false);
-	const [addedCount, setAddedCount] = useState(1);
-	const [extraItems, setExtraItems] = useState([]);
-	const addItems = () => {
-		if (addedCount > 2) {
-			return [];
-		}
-
-		const newItems = [...Array(20)].map((_, id) => {
-			const attr = {
-				id,
-				title: id.toString(),
-				imageUrl: 'img/undraw_docusaurus_react.svg',
-			    author: '@AncientMoon',
-				description: 'img/undraw_docusaurus_react.svg',
-			};
-			return <Asset id={attr.id} imageUrl={attr.imageUrl} title={attr.title} description={attr.description} />;
-		});
-
-/*
-		if (addedCount == 1) {
-			setExtraItems(newItems.slice(8, 11));
-		} else if (addedCount == 2) {
-			setExtraItems(newItems.slice(11, 15));
-		}
-*/
-		setAdded(true);
-		setAddedCount(addedCount + 1);
-		return newItems;
-	};
+	];
 
   return (
-    <div className="service">
-    				{features && features.length && (
-    								<Carousel className={'exampleCarousel1'}
-    									swiping={true}
-    									dynamic={true}
-    									show={1}
-    									slide={1}
-    									transition={0.5}
-    								>
-    									{features.map((props, idx) => (
-    										<Asset key={props.id} {...props} />
-    									))}
-    								</Carousel>
-    				)}
-    </div>
+    <ImageList sx={{ width: 500, height: 450 }}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.imageUrl}>
+          <img
+            src={`${item.imageUrl}?w=248&fit=crop&auto=format`}
+            srcSet={`${item.imageUrl}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar
+            title={item.title}
+            subtitle={<span>by: {item.author}</span>}
+            position="below"
+          />
+        </ImageListItem>
+      ))}
+    </ImageList>
   );
 };
 
-export default layout(ServicePage)({ pageName: 'Service' });
+export default layout(NFTPage)({ pageName: 'Service' });
 
