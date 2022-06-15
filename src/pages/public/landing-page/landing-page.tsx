@@ -26,11 +26,7 @@ const LandingPage: React.FC = () => {
       <div className="container">
         <header>
           <img className="logo" src={logo192} />
-        </header>
-
-        <article>
-          <img className="logo-small-screen" src={logo192} />
-          <Grid container className="grid-menu">
+          <Grid container className="grid-menu-1">
             <Grid
               xs={6}
               item
@@ -60,6 +56,10 @@ const LandingPage: React.FC = () => {
               </Typography>
             </Grid>
           </Grid>
+        </header>
+
+        <article>
+          <img className="logo-small-screen" src={logo192} />
           <h1 className="title">{t('landingPage.title')}</h1>
           <p className="subtitle">{t('landingPage.subtitle')}</p>
           <Grid container className="grid-menu">
