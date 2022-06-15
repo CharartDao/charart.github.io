@@ -95,5 +95,5 @@ const PhysicalArtPage: React.FC = () => {
   </ImageList> );
 };
 
-export default layout(PhysicalArtPage)({ pageName: 'digitalArt' });
+export default layout(PhysicalArtPage)({ pageName: 'physicalArt' });
 

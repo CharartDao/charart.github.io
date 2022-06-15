@@ -20,6 +20,7 @@ const Route: React.FC = () => {
       {/* Public PAGES */}
       <PublicRoute path={ABOUT} component={AboutPage} />
       <PublicRoute path={DIGITALART} component={DigitalArtPage} />
+      <PublicRoute path={PHYSICALART} component={PhysicalArtPage} />
       <PublicRoute path={ART_DETAIL_PAGE} component={ArtDetailPage} />
       <PublicRoute path={LANDING} component={LandingPage} />
     </Switch>
