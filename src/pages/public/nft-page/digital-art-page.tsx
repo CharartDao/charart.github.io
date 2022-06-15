@@ -4,13 +4,13 @@ import ImageListItem, { imageListItemClasses } from '@mui/material/ImageListItem
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import layout from '../../../components/layout';
 //import Asset from '../../../components/asset';
-import './nft-page.scss';
+import './digitalArt-page.scss';
 import Waterbird from '../../../arttemp/Waterbird.JPG';
 import Cat from '../../../arttemp/IMG_0721.JPG';
 import LesserWhiteToothedShrew from '../../../arttemp/IMG_E0842.JPG';
 import BlackWhiteTiger from '../../../arttemp/IMG_0917.JPG';
 
-const NFTPage: React.FC = () => {
+const digitalArtPage: React.FC = () => {
 
     const itemData = [
       {
@@ -95,5 +95,5 @@ const NFTPage: React.FC = () => {
   </ImageList> );
 };
 
-export default layout(NFTPage)({ pageName: 'NFT' });
+export default layout(digitalArtPage)({ pageName: 'digitalArt' });
 

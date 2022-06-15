@@ -4,7 +4,7 @@ import { EmojiSymbols, TravelExplore } from '@mui/icons-material';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import './landing-page.scss';
-import { ABOUT, NFT } from '../../../routes/public';
+import { ABOUT, DIGITALART } from '../../../routes/public';
 import FooterDefaultComponent from '../../../components/default-footer';
 import logo192 from '../../../logobw.svg';
 
@@ -35,17 +35,16 @@ const LandingPage: React.FC = () => {
           <Grid container className="grid-menu">
             <Grid
               xs={6}
-              sm={6}
               item
               className="menu-item"
               onClick={() => {
-                history.push(NFT);
+                history.push(DIGITALART);
               }}
             >
-              <EmojiSymbols className="icon" fontSize="large"/>
+              <TravelExplore className="icon" fontSize="large"/>
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.foolishArtServices')}
+                {t('landingPage.digitalArt')}
               </Typography>
             </Grid>
             <Grid
@@ -59,35 +58,7 @@ const LandingPage: React.FC = () => {
               <TravelExplore className="icon" fontSize="large"/>
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.nftArts')}
-              </Typography>
-            </Grid>
-            <Grid
-              xs={6}
-              item
-              className="menu-item"
-              onClick={() => {
-                history.push(ABOUT);
-              }}
-            >
-              <TravelExplore className="icon" fontSize="large"/>
-              <br />
-              <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.nftBooks')}
-              </Typography>
-            </Grid>
-            <Grid
-              xs={6}
-              item
-              className="menu-item"
-              onClick={() => {
-                history.push(ABOUT);
-              }}
-            >
-              <TravelExplore className="icon" fontSize="large"/>
-              <br />
-              <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.aboutFoolishArt')}
+                {t('landingPage.physicalArt')}
               </Typography>
             </Grid>
           </Grid>
