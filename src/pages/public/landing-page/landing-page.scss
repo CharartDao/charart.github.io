@@ -24,7 +24,7 @@
 
         & > .item-title {
           text-align: center;
-          color: $black-default;
+          color: $white-default;
           cursor: pointer;
         }
 
@@ -32,7 +32,7 @@
           & svg,
           path,
           * {
-            fill: $black-default;
+            fill: $white-default;
             cursor: pointer;
             width: 100px;
           }
@@ -76,7 +76,7 @@
     }
 
     & > .grid-menu {
-      margin-top: 80px;
+      margin-top: 50px;
       margin-bottom: 50px;
       cursor: pointer;
 
@@ -86,7 +86,7 @@
         cursor: pointer;
 
         & > .item-title {
-          font-size: 20px;
+          font-size: 21px;
           font-weight: 500;
           line-height: 28px;
           text-align: center;
@@ -143,7 +143,7 @@
 
   @media (max-width: 599px) {
     & {
-      background-color: $white-default;
+      background-color: $primary-color;
     }
 
     header {
@@ -179,7 +179,7 @@
     article {
       width: 100%;
       margin-top: 0;
-      background-color: $primary-color;
+      background-color: $white-default;
       border-top-left-radius: 0;
       border-top-right-radius: 0;
 
@@ -190,15 +190,15 @@
       }
 
       & > .title {
-        color: $white-default;
+        color: $black-default;
       }
 
       & > .subtitle {
-        color: $white-default;
+        color: $black-default;
       }
 
       & > .email-text {
-        color: $white-default;
+        color: $black-default;
       }
 
       & > .grid-menu {
@@ -211,14 +211,14 @@
           margin-bottom: 28px;
 
           & > .item-title {
-            color: $white-default;
+            color: $black-default;
           }
 
           & > .icon {
             & svg,
             path,
             * {
-              fill: $white-default;
+              fill: $black-default;
             }
           }
         }
