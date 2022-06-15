@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Grid, Typography } from '@mui/material';
-import { EmojiSymbols, TravelExplore } from '@mui/icons-material';
+import { EmojiSymbols, Palette, TravelExplore } from '@mui/icons-material';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import './landing-page.scss';
@@ -41,7 +41,7 @@ const LandingPage: React.FC = () => {
                 history.push(DIGITALART);
               }}
             >
-              <TravelExplore className="icon" fontSize="large"/>
+              <EmojiSymbols className="icon" fontSize="large" color="action"/>
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
                 {t('landingPage.digitalArt')}
@@ -55,7 +55,7 @@ const LandingPage: React.FC = () => {
                 history.push(ABOUT);
               }}
             >
-              <TravelExplore className="icon" fontSize="large"/>
+              <Palette className="icon" fontSize="large"/>
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
                 {t('landingPage.physicalArt')}
