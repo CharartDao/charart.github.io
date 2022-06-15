@@ -30,6 +30,36 @@ const LandingPage: React.FC = () => {
 
         <article>
           <img className="logo-small-screen" src={logo192} />
+          <Grid container className="grid-menu">
+            <Grid
+              xs={6}
+              item
+              className="menu-item"
+              onClick={() => {
+                history.push(DIGITALART);
+              }}
+            >
+              <EmojiSymbols className="icon" fontSize="large" color="action"/>
+              <br />
+              <Typography className="item-title" variant="body2" gutterBottom>
+                {t('landingPage.digitalArt')}
+              </Typography>
+            </Grid>
+            <Grid
+              xs={6}
+              item
+              className="menu-item"
+              onClick={() => {
+                history.push(PHYSICALART);
+              }}
+            >
+              <Palette className="icon" fontSize="large"/>
+              <br />
+              <Typography className="item-title" variant="body2" gutterBottom>
+                {t('landingPage.physicalArt')}
+              </Typography>
+            </Grid>
+          </Grid>
           <h1 className="title">{t('landingPage.title')}</h1>
           <p className="subtitle">{t('landingPage.subtitle')}</p>
           <Grid container className="grid-menu">
