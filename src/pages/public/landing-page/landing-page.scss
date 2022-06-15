@@ -61,8 +61,9 @@
         cursor: pointer;
 
         & > .item-title {
-          font-size: 14px;
-          line-height: 16px;
+          font-size: 24px;
+          font-weight: 500;
+          line-height: 28px;
           text-align: center;
           color: $black-default;
           cursor: pointer;
@@ -74,7 +75,7 @@
           * {
             fill: $black-default;
             cursor: pointer;
-            width: 100px;
+            width: 200px;
           }
         }
       }
