@@ -29,7 +29,7 @@
     "profile": "Profile",
     "identifyArtItem": "Identify",
     "artOverview": "Art",
-    "nftOverview": "nft"
+    "digitalArtOverview": "digitalArt"
   },
   "artOverviewPage": {
     "headline": "Art Overview",
@@ -46,9 +46,11 @@
     "newAccount": "New account",
     "login": "login",
     "resetPassword": "Forgot password?",
-    "foolishArtServices": "NFT",
-    "nftArts": "Digital Art",
-    "nftBooks": "Physical Art",
+    "foolishArtServices": "digitalArt",
+    "digitalArt": "Digital Art",
+    "physicalArt": "Physical Art",
+    "user": "User",
+    "artist": "Artist",
     "aboutFoolishArt": "About"
   },
   "artDetailPage": {
