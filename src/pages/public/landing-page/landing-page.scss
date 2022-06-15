@@ -15,6 +15,30 @@
       height: 64px;
       margin: 55px;
     }
+
+    & > .grid-menu-1 {
+      cursor: pointer;
+
+      & > .menu-item {
+        cursor: pointer;
+
+        & > .item-title {
+          text-align: center;
+          color: $black-default;
+          cursor: pointer;
+        }
+
+        & > .icon {
+          & svg,
+          path,
+          * {
+            fill: $black-default;
+            cursor: pointer;
+            width: 100px;
+          }
+        }
+      }
+    }
   }
 
   article {
