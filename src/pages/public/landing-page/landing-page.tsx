@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Grid, Typography } from '@mui/material';
-import { EmojiSymbols, Palette, TravelExplore } from '@mui/icons-material';
+import { AccountCircle, EmojiSymbols, Palette, SelfImprovementRounded, TravelExplore } from '@mui/icons-material';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import './landing-page.scss';
@@ -35,10 +35,10 @@ const LandingPage: React.FC = () => {
                 history.push(DIGITALART);
               }}
             >
-              <EmojiSymbols className="icon" fontSize="large" color="action"/>
+              <AccountCircle className="icon" fontSize="large" color="action"/>
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.digitalArt')}
+                {t('landingPage.user')}
               </Typography>
             </Grid>
             <Grid
@@ -49,10 +49,10 @@ const LandingPage: React.FC = () => {
                 history.push(PHYSICALART);
               }}
             >
-              <Palette className="icon" fontSize="large"/>
+              <SelfImprovementRounded className="icon" fontSize="large"/>
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.physicalArt')}
+                {t('landingPage.artist')}
               </Typography>
             </Grid>
           </Grid>
