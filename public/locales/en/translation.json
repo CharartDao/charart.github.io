@@ -49,6 +49,8 @@
     "foolishArtServices": "digitalArt",
     "digitalArt": "Digital Art",
     "physicalArt": "Physical Art",
+    "user": "User",
+    "artist": "Artist",
     "aboutFoolishArt": "About"
   },
   "artDetailPage": {
