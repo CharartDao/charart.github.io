@@ -31,13 +31,14 @@
     "artOverview": "Art",
     "digitalArtOverview": "digitalArt"
   },
-  "artOverviewPage": {
-    "headline": "Art Overview",
-    "intro": "Check the arts.",
-    "newArtToggle": "Click here",
-    "newArtText": "to see new products only.",
-    "kpi": {
-      "available arts": "Available Arts"
+  "digitalArtPage": {
+    "make": {
+      "title": "Make",
+      "text": "With our tools for generating digital art, you can transfer your message, text, voice, image into a digital art, which you can enjoy it, share it and sale it in our plattfrom. "  
+    },    
+    "buy": {
+      "title": "Buy",
+      "text": "This is the place for you as art lovers and fosters to explore and foster the growing digital art era. We have here not only NFTs such as tokenization of gifs, memes, music, videos and 3D models, but also digital items such as online meeting background paper for you to buy using your county currency. The inclusion of traditional and emerging technology and currency art is supporting Foolart to foster art and artists. "   
     }
   },
   "landingPage": {
@@ -49,6 +50,8 @@
     "foolishArtServices": "digitalArt",
     "digitalArt": "Digital Art",
     "physicalArt": "Physical Art",
+    "user": "User",
+    "artist": "Artist",
     "aboutFoolishArt": "About"
   },
   "artDetailPage": {
