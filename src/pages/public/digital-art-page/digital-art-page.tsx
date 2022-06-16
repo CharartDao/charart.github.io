@@ -3,6 +3,13 @@ import ImageList from '@mui/material/ImageList';
 import ImageListItem, { imageListItemClasses } from '@mui/material/ImageListItem';
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import layout from '../../../components/layout';
+import { Grid, Typography } from '@mui/material';
+import { AccountCircle, EmojiSymbols, Palette, SelfImprovementRounded, TravelExplore } from '@mui/icons-material';
+import { initReactI18next, useTranslation } from 'react-i18next';
+import { useHistory } from 'react-router-dom';
+import './landing-page.scss';
+import { ABOUT, DIGITALART, PHYSICALART } from '../../../routes/public';
+import FooterDefaultComponent from '../../../components/default-footer';
 //import Asset from '../../../components/asset';
 import './digital-art-page.scss';
 import Waterbird from '../../../arttemp/Waterbird.JPG';
@@ -11,6 +18,9 @@ import LesserWhiteToothedShrew from '../../../arttemp/IMG_E0842.JPG';
 import BlackWhiteTiger from '../../../arttemp/IMG_0917.JPG';
 
 const DigitalArtPage: React.FC = () => {
+
+  const { t } = useTranslation();
+  const history = useHistory();
 
     const itemData = [
       {
@@ -76,7 +86,45 @@ const DigitalArtPage: React.FC = () => {
   }, []);
 
   return (
-    <ImageList cols={columns}>
+    <div className="page-landing">
+    <div className="container">
+      <header>
+        <Grid container className="grid-menu-1">
+          <Grid
+            xs={6}
+            item
+            className="menu-item"
+            onClick={() => {
+              history.push(DIGITALART);
+            }}
+          >
+            <AccountCircle className="icon" fontSize="large" color="action"/>
+            <br />
+            <Typography className="item-title" variant="body2" gutterBottom>
+              {t('landingPage.user')}
+            </Typography>
+          </Grid>
+          <Grid
+            xs={6}
+            item
+            className="menu-item"
+            onClick={() => {
+              history.push(PHYSICALART);
+            }}
+          >
+            <SelfImprovementRounded className="icon" fontSize="large"/>
+            <br />
+            <Typography className="item-title" variant="body2" gutterBottom>
+              {t('landingPage.artist')}
+            </Typography>
+          </Grid>
+        </Grid>
+      </header>
+
+      <article>
+        <h1 className="title">{t('landingPage.title')}</h1>
+        <p className="subtitle">{t('landingPage.subtitle')}</p>
+        <ImageList cols={columns}>
       {itemData.map((item) => (
         <ImageListItem key={item.imageUrl}>
           <img
@@ -91,8 +139,13 @@ const DigitalArtPage: React.FC = () => {
             position="below"
           />
         </ImageListItem>
-      ))}
-  </ImageList> );
+              ))}
+        </ImageList> 
+      </article>
+      <FooterDefaultComponent />
+      <div></div>
+    </div>
+  </div> );
 };
 
 export default layout(DigitalArtPage)({ pageName: 'digitalArt' });
