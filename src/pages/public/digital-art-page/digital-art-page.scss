@@ -5,7 +5,6 @@
   min-height: 100vh;
   position: relative;
   padding-bottom: 40px;
-  background-color: $primary-color;
 
   header {
     text-align: center;
@@ -23,7 +22,7 @@
 
         & > .item-title {
           text-align: center;
-          color: $white-default;
+          color: $black-default;
           cursor: pointer;
         }
 
@@ -31,7 +30,7 @@
           & svg,
           path,
           * {
-            fill: $white-default;
+            fill: $black-default;
             cursor: pointer;
             width: 100px;
           }
@@ -41,7 +40,6 @@
   }
 
   article {
-    background-color: $white-default;
 
     & > .logo-small-screen {
       display: none;
