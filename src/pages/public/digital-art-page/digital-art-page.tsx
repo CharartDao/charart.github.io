@@ -7,7 +7,6 @@ import { Grid, Typography } from '@mui/material';
 import { AccountCircle, EmojiSymbols, Palette, SelfImprovementRounded, TravelExplore } from '@mui/icons-material';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
-import './landing-page.scss';
 import { ABOUT, DIGITALART, PHYSICALART } from '../../../routes/public';
 import FooterDefaultComponent from '../../../components/default-footer';
 //import Asset from '../../../components/asset';
@@ -86,7 +85,7 @@ const DigitalArtPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="page-landing">
+    <div className="page-digital-art">
     <div className="container">
       <header>
         <Grid container className="grid-menu-1">
