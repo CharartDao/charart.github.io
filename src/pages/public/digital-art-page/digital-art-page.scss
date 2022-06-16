@@ -40,7 +40,6 @@
   }
 
   article {
-
     & > .logo-small-screen {
       display: none;
     }
@@ -50,7 +49,8 @@
       font-weight: 500;
       line-height: 28px;
       color: $black-default;
-      margin: 36px 0 10px;
+      text-align: center;
+      margin: 10px 0 10px;
     }
 
     & > .subtitle {
@@ -58,6 +58,7 @@
       line-height: 20px;
       letter-spacing: 0.25px;
       color: $black-default;
+      text-align: center;
     }
 
     & > .email-text {
@@ -118,7 +119,7 @@
           letter-spacing: 0.25px;
           opacity: 0.9;
           cursor: pointer;
-          color: $white-default;
+          color: $black-default;
         }
       }
     }
