@@ -87,42 +87,8 @@ const DigitalArtPage: React.FC = () => {
   return (
     <div className="page-digital-art">
     <div className="container">
-      <header>
-        <Grid container className="grid-menu-1">
-          <Grid
-            xs={6}
-            item
-            className="menu-item"
-            onClick={() => {
-              history.push(DIGITALART);
-            }}
-          >
-            <AccountCircle className="icon" fontSize="large" color="action"/>
-            <br />
-            <Typography className="item-title" variant="body2" gutterBottom>
-              {t('landingPage.user')}
-            </Typography>
-          </Grid>
-          <Grid
-            xs={6}
-            item
-            className="menu-item"
-            onClick={() => {
-              history.push(PHYSICALART);
-            }}
-          >
-            <SelfImprovementRounded className="icon" fontSize="large"/>
-            <br />
-            <Typography className="item-title" variant="body2" gutterBottom>
-              {t('landingPage.artist')}
-            </Typography>
-          </Grid>
-        </Grid>
-      </header>
-
-      <article>
-        <h1 className="title">{t('landingPage.title')}</h1>
-        <p className="subtitle">{t('landingPage.subtitle')}</p>
+    <article>
+        <h1 className="title" text-align="center">{t('digitalArtPage.make.title')}</h1>
         <ImageList cols={columns}>
       {itemData.map((item) => (
         <ImageListItem key={item.imageUrl}>
@@ -140,6 +106,29 @@ const DigitalArtPage: React.FC = () => {
         </ImageListItem>
               ))}
         </ImageList> 
+        <p className="subtitle">{t('digitalArtPage.make.text')}</p>
+      </article>
+
+      <article>
+        <h1 className="title" text-align="center" >{t('digitalArtPage.buy.title')}</h1>
+        <ImageList cols={columns}>
+      {itemData.map((item) => (
+        <ImageListItem key={item.imageUrl}>
+          <img
+            src={`${item.imageUrl}?w=248&fit=crop&auto=format`}
+            srcSet={`${item.imageUrl}?w=248&fit=crop&auto=format&dpr=2 2x`}
+            alt={item.title}
+            loading="lazy"
+          />
+          <ImageListItemBar
+            title={item.title}
+            subtitle={<span>by: {item.author}</span>}
+            position="below"
+          />
+        </ImageListItem>
+              ))}
+        </ImageList> 
+        <p className="subtitle">{t('digitalArtPage.buy.text')}</p>
       </article>
       <FooterDefaultComponent />
       <div></div>
