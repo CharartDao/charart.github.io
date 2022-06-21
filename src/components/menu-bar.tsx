@@ -1,11 +1,11 @@
 import MenuIcon from '@mui/icons-material/Menu';
 import { AppBar as AppBarMat, Box, Button, Toolbar } from '@mui/material';
-import { DIGITALART } from '../routes/public';
+import { LANDING } from '../routes/public';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import NotificationBell from './notification-bell';
 import Profile from './profile';
-import logo192 from '..//logo.svg';
+import logo192 from '..//logobw.svg';
 
 const MenuBar: React.FC = () => {
 
@@ -25,8 +25,8 @@ const MenuBar: React.FC = () => {
           />
         </Box>
         <Box textAlign="center">
-          <Link href="#" id="Header_Title_Link" color="inherit" to={DIGITALART}>
-            <img src={logo192} width={83} />
+          <Link href="#" id="Header_Title_Link" color="inherit" to={LANDING}>
+            <img src={logo192} width={48} />
           </Link>
         </Box>
         <Box display="flex" justifyContent="flex-end">
