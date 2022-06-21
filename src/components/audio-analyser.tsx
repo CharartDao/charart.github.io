@@ -11,7 +11,7 @@ type State = {
 
 declare const window: any;
 
-class AudioAnalyser extends Component <Props, State>{
+export class AudioAnalyser extends React.PureComponent<Props, State> {
   analyser: any;
   audioContext: any;
   source: any;
