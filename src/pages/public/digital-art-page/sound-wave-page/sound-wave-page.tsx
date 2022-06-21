@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import layout from '../../../../components/layout';
 import MicrophoneInput from '../../../../components/microphone-input';
+import './sound-wave-page.scss';
 
 const SoundWavePage: React.FC = () => {
 
