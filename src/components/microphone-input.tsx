@@ -9,7 +9,7 @@ type State = {
      audio: MediaStream  | null
     };
 
-class App extends Component <PageProps, State>{
+class MicrophoneInput extends Component <PageProps, State>{
   constructor(props: PageProps) {
     super(props);
     this.state = {
@@ -41,7 +41,7 @@ class App extends Component <PageProps, State>{
 
   render() {
     return (
-      <div className="App">
+      <div className="sound-wave">
         <div className="controls">
           <button onClick={this.toggleMicrophone}>
             {this.state.audio ? 'Stop microphone' : 'Get microphone input'}
@@ -53,4 +53,4 @@ class App extends Component <PageProps, State>{
   }
 }
 
-export default App;
+export default MicrophoneInput;

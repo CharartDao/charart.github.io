@@ -6,6 +6,7 @@ import {
   ABOUT,
   DIGITALART,
   PHYSICALART,
+  SOUND_WAVE
 } from './public';
 
 import LandingPage from '../pages/public/landing-page/landing-page';
@@ -13,6 +14,7 @@ import ArtDetailPage from '../pages/public/art-detail-page/art-detail-page';
 import AboutPage from '../pages/public/about-page/about-page';
 import DigitalArtPage from '../pages/public/digital-art-page/digital-art-page';
 import PhysicalArtPage from '../pages/public/physical-art-page/physical-art-page';
+import soundWavePage from '../pages/public/digital-art-page/sound-wave-page/sound-wave-page';
 
 const Route: React.FC = () => {
   return (
@@ -23,6 +25,7 @@ const Route: React.FC = () => {
       <PublicRoute path={PHYSICALART} component={PhysicalArtPage} />
       <PublicRoute path={ART_DETAIL_PAGE} component={ArtDetailPage} />
       <PublicRoute path={LANDING} component={LandingPage} />
+      <PublicRoute path={SOUND_WAVE} component={soundWavePage} />
     </Switch>
   );
 };
