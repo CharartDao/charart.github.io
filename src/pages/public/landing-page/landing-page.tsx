@@ -4,7 +4,7 @@ import { AccountCircle, EmojiSymbols, Palette, SelfImprovementRounded, TravelExp
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import './landing-page.scss';
-import { ABOUT, DIGITALART, PHYSICALART, SOUND_WAVE } from '../../../routes/public';
+import { ABOUT, DIGITALART, PHYSICALART, SOUNDWAVE } from '../../../routes/public';
 import FooterDefaultComponent from '../../../components/default-footer';
 import logo192 from '../../../logobw.svg';
 
@@ -46,7 +46,7 @@ const LandingPage: React.FC = () => {
               item
               className="menu-item"
               onClick={() => {
-                history.push(SOUND_WAVE);
+                history.push(SOUNDWAVE);
               }}
             >
               <SelfImprovementRounded className="icon" fontSize="large"/>
