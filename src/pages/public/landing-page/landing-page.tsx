@@ -28,7 +28,7 @@ const LandingPage: React.FC = () => {
           <img className="logo" src={logo192} />
           <Grid container className="grid-menu-1">
             <Grid
-              xs={6}
+              xs={12}
               item
               className="menu-item"
               onClick={() => {
@@ -39,20 +39,6 @@ const LandingPage: React.FC = () => {
               <br />
               <Typography className="item-title" variant="body2" gutterBottom>
                 {t('landingPage.user')}
-              </Typography>
-            </Grid>
-            <Grid
-              xs={6}
-              item
-              className="menu-item"
-              onClick={() => {
-                history.push(SOUNDWAVE);
-              }}
-            >
-              <SelfImprovementRounded className="icon" fontSize="large"/>
-              <br />
-              <Typography className="item-title" variant="body2" gutterBottom>
-                {t('landingPage.artist')}
               </Typography>
             </Grid>
           </Grid>

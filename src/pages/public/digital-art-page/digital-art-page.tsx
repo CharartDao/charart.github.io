@@ -4,7 +4,7 @@ import ImageListItem, { imageListItemClasses } from '@mui/material/ImageListItem
 import ImageListItemBar from '@mui/material/ImageListItemBar';
 import layout from '../../../components/layout';
 import { Grid, Typography } from '@mui/material';
-import { AccountCircle, EmojiSymbols, Palette, SelfImprovementRounded, TravelExplore } from '@mui/icons-material';
+import { AccountCircle, EmojiSymbols, Palette, SelfImprovementRounded } from '@mui/icons-material';
 import { initReactI18next, useTranslation } from 'react-i18next';
 import { useHistory } from 'react-router-dom';
 import { ABOUT, DIGITALART, PHYSICALART } from '../../../routes/public';
