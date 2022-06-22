@@ -18,6 +18,7 @@ class AudioVisualiser extends Component <Props> {
 
   draw() {
     const { audioData } = this.props;
+    console.log("audioData2:", audioData)
     const canvas = this.canvas.current;
     const height = canvas!.height;
     const width = canvas!.width;
