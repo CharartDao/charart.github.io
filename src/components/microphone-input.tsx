@@ -6,25 +6,26 @@ export type PageProps = {
 };
 
 type State = {
-     audio: MediaStream  | null
+  audioElement: MediaStream  | null
     };
 
 class MicrophoneInput extends Component <PageProps, State>{
   constructor(props: PageProps) {
     super(props);
     this.state = {
-      audio: null
+      audioElement: null
     };
     this.toggleMicrophone = this.toggleMicrophone.bind(this);
   }
 
   async getMicrophone() {
     try {
-    const audio = await navigator.mediaDevices.getUserMedia({
+    const audioElement = await navigator.mediaDevices.getUserMedia({
       audio: true,
       video: false
     });
-    this.setState({ audio });         
+    this.setState({ audioElement });         
+    console.log("audioElement", audioElement);
     } catch (err) {
       if (console) {
         //TODO: handle the OverconstrainedError {message: "Invalid constraint", constraint: "", name: "OverconstrainedError"} to inform user to let use microphone.
@@ -33,14 +34,13 @@ class MicrophoneInput extends Component <PageProps, State>{
     }   
   }
 
-
   stopMicrophone() {
-    this.state.audio!.getTracks().forEach(track => track.stop());
-    this.setState({ audio: null });
+    this.state.audioElement!.getTracks().forEach(track => track.stop());
+    this.setState({ audioElement: null });
   }
 
   toggleMicrophone() {
-    if (this.state.audio) {
+    if (this.state.audioElement) {
       this.stopMicrophone();
     } else {
       this.getMicrophone();
@@ -52,27 +52,13 @@ class MicrophoneInput extends Component <PageProps, State>{
       <div className="sound-wave">
         <div className="controls">
           <button onClick={this.toggleMicrophone}>
-            {this.state.audio ? 'Stop microphone' : 'Get microphone input'}
+            {this.state.audioElement ? 'Stop microphone' : 'Get microphone input'}
           </button>
         </div>
-        {this.state.audio ? <AudioAnalyser audio={this.state.audio} /> : ''}
+        {this.state.audioElement ? <AudioAnalyser audio={this.state.audioElement} /> : ''}
       </div>
     );
   }
 }
 
 export default MicrophoneInput;
-
-function stopMicrophone() {
-  throw new Error('Function not implemented.');
-}
-
-
-function toggleMicrophone() {
-  throw new Error('Function not implemented.');
-}
-
-
-function render() {
-  throw new Error('Function not implemented.');
-}

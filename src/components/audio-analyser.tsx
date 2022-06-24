@@ -28,8 +28,12 @@ export class AudioAnalyser extends React.PureComponent<Props, State> {
     this.audioContext = new (window.AudioContext || window.webkitAudioContext)();
     console.log("audio context", this.audioContext);
     this.analyser = this.audioContext.createAnalyser();
+    console.log("data analyser", this.analyser);
+    console.log("data analyser.frequencyBinCount", this.analyser.frequencyBinCount);
     this.dataArray = new Uint8Array(this.analyser.frequencyBinCount);
+    console.log("data array", this.dataArray);
     this.source = this.audioContext.createMediaStreamSource(this.props.audio);
+    console.log("this.props.audio", this.props.audio);
     this.source.connect(this.analyser);
     this.rafId = requestAnimationFrame(this.tick);
   }
