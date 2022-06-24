@@ -19,23 +19,16 @@ class MicrophoneInput extends Component <PageProps, State>{
   }
 
   async getMicrophone() {
-    try {
     const audioElement = await navigator.mediaDevices.getUserMedia({
       audio: true,
       video: false
     });
     this.setState({ audioElement });         
     console.log("audioElement", audioElement);
-    } catch (err) {
-      if (console) {
-        //TODO: handle the OverconstrainedError {message: "Invalid constraint", constraint: "", name: "OverconstrainedError"} to inform user to let use microphone.
-        console.error(err)
-      }
-    }   
   }
 
   stopMicrophone() {
-    this.state.audioElement!.getTracks().forEach(track => track.stop());
+    this.state.audioElement!.getTracks().forEach(track => {track.stop(); console.log(track);});
     this.setState({ audioElement: null });
   }
 
