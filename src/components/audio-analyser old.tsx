@@ -1,17 +1,4 @@
 import React, { Component } from 'react';
-import { IAnimation } from "./types"
-import { Arcs, IArcsOptions } from "./animations/Arcs";
-import { Circles, ICirclesOptions } from "./animations/Circles";
-import { Cubes, ICubesOptions } from "./animations/Cubes";
-import { Flower, IFlowerOptions } from "./animations/Flower";
-import { Glob, IGlobOptions } from "./animations/Glob";
-import { Lines, ILinesOptions } from "./animations/Lines";
-import { Shine, IShineOptions } from "./animations/Shine";
-import { Square, ISquareOptions } from "./animations/Square";
-import { Turntable, ITurntableOptions } from "./animations/Turntable";
-import { Wave as WaveAnimation, IWaveOptions } from "./animations/Wave";
-
-export type { IArcsOptions, ICirclesOptions, ICubesOptions, IFlowerOptions, IGlobOptions, ILinesOptions, IShineOptions, ISquareOptions, ITurntableOptions, IWaveOptions };
 
 type Props = {
 audio: MediaStream
@@ -29,43 +16,19 @@ declare global {
 }
 
 export class AudioAnalyser extends React.PureComponent<Props, State> {
-
-  public animations = {
-    "Arcs": Arcs,
-    "Circles": Circles,
-    "Cubes": Cubes,
-    "Flower": Flower,
-    "Glob": Glob,
-    "Lines": Lines,
-    "Shine": Shine,
-    "Square": Square,
-    "Turntable": Turntable,
-    "Wave": WaveAnimation
-};
-private _activeAnimations: IAnimation[] = [];
-
-constructor(props: Props) {
-  super(props);
-
-  this.state = { audioData: new Uint8Array(0) };
-  this.canvas = React.createRef();
-  this.tick = this.tick.bind(this);
-}
-
-public addAnimation(animation: IAnimation): void {
-    this._activeAnimations.push(animation);
-}
-
-public clearAnimations(): void {
-    this._activeAnimations = [];
-}
-
   audioContext!: AudioContext;
   analyser!: AnalyserNode;
   dataArray!: Uint8Array;
   source!: MediaStreamAudioSourceNode;
   rafId!: number;
   canvas!: React.RefObject<HTMLCanvasElement>;
+
+  constructor(props: Props) {
+    super(props);
+    this.state = { audioData: new Uint8Array(0) };
+    this.canvas = React.createRef();
+    this.tick = this.tick.bind(this);
+  }
 
   componentDidMount() {
     this.audioContext = new (window.webkitAudioContext || window.AudioContext || window.mozAudioContext)();
@@ -110,9 +73,6 @@ public clearAnimations(): void {
 
     context!.beginPath();
     context!.moveTo(0, height / 2);
-    this._activeAnimations.forEach((animation) => {
-      animation.draw(this.state.audioData, context!);
-  })
     this.state.audioData.forEach(item => {
         const y = (item / 255.0) * height;
         context!.lineTo(x, y);

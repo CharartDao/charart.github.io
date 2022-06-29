@@ -15,6 +15,7 @@ import AboutPage from '../pages/public/about-page/about-page';
 import DigitalArtPage from '../pages/public/digital-art-page/digital-art-page';
 import PhysicalArtPage from '../pages/public/physical-art-page/physical-art-page';
 import SoundWavePage from '../pages/public/sound-wave-page/sound-wave-page';
+//import WavePage from '../test/soundWave-page/soundWave-page';
 
 const Route: React.FC = () => {
   return (
