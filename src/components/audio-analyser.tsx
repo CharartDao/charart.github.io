@@ -101,7 +101,7 @@ public clearAnimations(): void {
     const width = canvas!.width;
     const context = canvas!.getContext('2d');
     let x = 0;
-    //let space = width / this.state.audioData.length;
+    let space = width / this.state.audioData.length;
     const sliceWidth = (width * 1.0) / this.state.audioData.length;
 
     context!.lineWidth = 2;
@@ -113,13 +113,13 @@ public clearAnimations(): void {
     this._activeAnimations.forEach((animation) => {
       animation.draw(this.state.audioData, context!);
   })
-    this.state.audioData.forEach(item => {
-        const y = (item / 255.0) * height;
-        context!.lineTo(x, y);
-        //context!.moveTo(space*item,height); //x,y
-        //context!.lineTo(space*item,height-value); //x,y
-        x += sliceWidth;
-    });
+  this.state.audioData.forEach(item => {
+    const y = (item / 255.0) * height;
+    context!.lineTo(x, y);
+    //context!.moveTo(space*item,height); //x,y
+    //context!.lineTo(space*item,height); //x,y
+    x += sliceWidth;
+  });
     context!.lineTo(x, height / 2);
     context!.stroke();
     this.addAnimation(new this.animations.Glob({
@@ -131,10 +131,10 @@ public clearAnimations(): void {
   }
 
   componentWillUnmount() {
-    cancelAnimationFrame(this.rafId);
+    //cancelAnimationFrame(this.rafId);
     this.analyser.disconnect();
     this.source.disconnect();
-    this.clearAnimations();
+    //this.clearAnimations();
 
   }
 
