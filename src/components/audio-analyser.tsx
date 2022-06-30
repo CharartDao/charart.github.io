@@ -122,6 +122,7 @@ public clearAnimations(): void {
     });
     context!.lineTo(x, height / 2);
     context!.stroke();
+    this.addAnimation(new this.animations.Shine());
     this.rafId = requestAnimationFrame(this.tick);
   }
 
@@ -129,6 +130,8 @@ public clearAnimations(): void {
     cancelAnimationFrame(this.rafId);
     this.analyser.disconnect();
     this.source.disconnect();
+    this.clearAnimations();
+
   }
 
   render() {
