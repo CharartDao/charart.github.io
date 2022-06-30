@@ -122,7 +122,11 @@ public clearAnimations(): void {
     });
     context!.lineTo(x, height / 2);
     context!.stroke();
-    this.addAnimation(new this.animations.Shine());
+    this.addAnimation(new this.animations.Glob({
+      fillColor: {gradient: ["red","blue","green"], rotate: 45},
+      lineWidth: 10,
+      lineColor: "#fff"
+    }));
     this.rafId = requestAnimationFrame(this.tick);
   }
 
