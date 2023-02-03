@@ -1,4 +1,4 @@
-# Foolart
+# Charart
 Stay hungry. 
 
 # Contributing
