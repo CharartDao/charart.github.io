@@ -1,4 +1,5 @@
 # Charart
+The Website needs to be updated due to transforming from comercial company website to a DAO website.
 Stay hungry. 
 
 # Contributing
